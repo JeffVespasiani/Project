@@ -22,9 +22,9 @@ class App extends Component {
 		return (
 			<div>
 			{
-				Object.keys(this.state.data).map((dynamicData, key) => 
+				Object.keys(this.state.data).map((listData, key) => 
 				<ul>
-					<li><p>{dynamicData.entry.entry["im:name"].label}</p></li>
+					<li><p>{listData.entry.entry["im:name"].label}</p><img src={listData.entry.entry["im:images"].label[0]} /></li>
 				</ul>
 				)
 			}
