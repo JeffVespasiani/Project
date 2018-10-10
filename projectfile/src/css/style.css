@@ -7,9 +7,11 @@
     color: #4863A0;
     background-color: white;
     padding: 18px;
-    width: 100%;
-    border: none;
+    width: 300px;
+    border: 2px solid black;
+	border-radius: 5px;
     text-align: center;
+	float: left;
     outline: none;
     font-size: 17px;
 }
