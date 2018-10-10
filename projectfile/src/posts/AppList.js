@@ -28,8 +28,8 @@ class App extends Component {
 					<li>summary: {myObj.summary.label}</li>
 					<li>price: {myObj['im:price'].label} {myObj['im:price'].attributes.currency}</li>
 					<li>category: {myObj.category.attributes.label}</li>
-					<li>linktostore: {myObj.link.attributes.href}</li>
-					<li>publisher: {myObj['im:artist'].label}</li>
+					<li><a href={myObj.link.attributes.href}>Buy it here!</a></li>
+					<li>publisher: <a href={myObj['im:artist'].attributes.href}>{myObj['im:artist'].label}</a></li>
 					<li>publisherlink: {myObj['im:artist'].attributes.href}</li>
 				</ul></div>
 			]
