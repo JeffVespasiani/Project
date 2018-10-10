@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/style.css';
+import moment from 'moment';
 
 class App extends Component {
 	
