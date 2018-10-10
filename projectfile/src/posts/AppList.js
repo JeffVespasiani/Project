@@ -25,7 +25,7 @@ class App extends Component {
 				<div key={2}><ul>
 					<li>{myObj['im:name'].label}</li>
 					<li><img src={myObj['im:image'][1].label} /></li>
-					<li>release date: {myObj['im:releaseDate'].label}</li>
+					<li>release date: {moment(myObj['im:releaseDate'].label).format('MM/DD/YYYY')}</li>
 					<li>{myObj.summary.label}</li>
 					<li>Price: {myObj['im:price'].label} {myObj['im:price'].attributes.currency}</li>
 					<li>category: {myObj.category.attributes.label}</li>
