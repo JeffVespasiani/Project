@@ -20,7 +20,7 @@ class App extends Component {
 	render() {
 		var MyList = this.state.data.map(function(myObj,index){
 			return <ul>
-				<li key={ index }>{myObj['im:name'].label}</li>
+				<li key={ index }>{myObj['im:name'].label}<img src={myObj['im:image'][0].label} /></li>
 			</ul>
 		})
 		return <div>{ MyList }</div>
