@@ -22,15 +22,14 @@ class App extends Component {
 			return [
 				<div key={1}><button className="menu" data-toggle="collapse"><img src={myObj['im:image'][0].label} /><br />{myObj['im:name'].label}</button></div>,
 				<div key={2}><ul>
-					<li>title: {myObj['im:name'].label}</li>
-					<li>icon: <img src={myObj['im:image'][1].label} /></li>
+					<li>{myObj['im:name'].label}</li>
+					<li><img src={myObj['im:image'][1].label} /></li>
 					<li>release date: {myObj['im:releaseDate'].label}</li>
-					<li>summary: {myObj.summary.label}</li>
-					<li>price: {myObj['im:price'].label} {myObj['im:price'].attributes.currency}</li>
+					<li>{myObj.summary.label}</li>
+					<li>Price: {myObj['im:price'].label} {myObj['im:price'].attributes.currency}</li>
 					<li>category: {myObj.category.attributes.label}</li>
 					<li><a href={myObj.link.attributes.href}>Buy it here!</a></li>
 					<li>publisher: <a href={myObj['im:artist'].attributes.href}>{myObj['im:artist'].label}</a></li>
-					<li>publisherlink: {myObj['im:artist'].attributes.href}</li>
 				</ul></div>
 			]
 		})
