@@ -1,0 +1,25 @@
+.list_header
+{
+	font-size: 15px;
+    color: grey;
+}
+.menu {
+    color: #4863A0;
+    background-color: white;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+}
+
+.active, .menu:hover {
+    background-color: #ccc;
+}
+
+.option {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
