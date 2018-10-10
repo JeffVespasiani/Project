@@ -24,26 +24,6 @@ class App extends Component {
 			</ul>
 		})
 		return <div>{ MyList }</div>
-		/*console.log(this.state.data);
-		return (
-			<div>
-			{
-				Object.keys(this.state.data).map((listData, key) => 
-				<ul>
-					<li><p>{listData.entry.entry["im:name"].label}</p><img src={listData.entry.entry["im:image"].label[0]} /></li>
-				</ul>
-				)
-			}
-			</div>
-		);*/
-	/*render() {
-    return (
-		<div>
-			{AppData.feed.entry.map((appDetail, index)=>{
-				return <p>{appDetail.entry['im:name'].label}</p>
-			})}
-		</div>
-    );*/
   }
 }
 
