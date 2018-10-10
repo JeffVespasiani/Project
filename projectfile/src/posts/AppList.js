@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-//import AppData from '..data/apple.json'
+import AppData from '../data/apple.json'
 
 class App extends Component {
+	
   constructor(props) {
 		super(props);
 		this.state = { data: [], };
@@ -29,16 +30,15 @@ class App extends Component {
 			}
 			</div>
 		);
-	}/*render() {
+	/*render() {
     return (
 		<div>
-			<h1>Test</h1>
 			{AppData.feed.entry.map((appDetail, index)=>{
-				return <p>{appDetail.label}</p>
+				return <p>{appDetail.entry['im:name'].label}</p>
 			})}
 		</div>
-    );
-  }*/
+    );*/
+  }
 }
 
 export default App;
