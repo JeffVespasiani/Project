@@ -6,7 +6,15 @@ class App extends Component {
 	
   constructor() {
 		super();
-		this.state = { data: [], };
+		this.state = { 
+			data: [],
+		};
+	}
+	
+	toggle() {
+		this.setState({
+			visible: true,
+		})
 	}
 	
 	componentDidMount() {
@@ -21,8 +29,8 @@ class App extends Component {
 	render() {
 		var MyList = this.state.data.map(function(myObj,index){
 			return [
-				<div key={1}><button className="menu" data-toggle="collapse"><img src={myObj['im:image'][0].label} /><br />{myObj['im:name'].label}</button></div>,
-				<div key={2}><ul>
+				<div key={1}><button className="menu" data-toggle="collapse" onClick><img src={myObj['im:image'][0].label} /><br />{myObj['im:name'].label}</button></div>,
+				<div key={2}><ul className="list">
 					<li>{myObj['im:name'].label}</li>
 					<li><img src={myObj['im:image'][1].label} /></li>
 					<li>Release Date: {moment(myObj['im:releaseDate'].label).format('MM/DD/YYYY')}</li>
