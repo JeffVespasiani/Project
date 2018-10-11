@@ -32,7 +32,6 @@ class App extends Component {
 			display: this.state.visible ? "block": "none"
 		}
 		
-		
 		//var MyList = 
 			return [
 			<div key={1}><h1>Welcome to the app store list!</h1><p>Click a title to learn more about it.</p></div>,
@@ -52,7 +51,8 @@ class App extends Component {
 		]}
 		
 		//return <div>{ MyList }</div>
-  }
+    }
+  
   
 
 export default App;
