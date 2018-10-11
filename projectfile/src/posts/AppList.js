@@ -53,7 +53,5 @@ class App extends Component {
 		
 		//return <div>{ MyList }</div>
     }
-  
-  
 
 export default App;
