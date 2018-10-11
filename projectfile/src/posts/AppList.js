@@ -8,15 +8,16 @@ class App extends Component {
 		super();
 		this.state = { 
 			data: [],
+			visible: false,
+			index: 0,
 		};
 	}
 	
-	toggle() {
+	toggle = () => {
 		this.setState({
-			visible: true,
+			visible: !this.state.visible,
 		})
 	}
-	
 	componentDidMount() {
 		fetch('http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json')
 		.then((Response) => Response.json())
@@ -27,23 +28,31 @@ class App extends Component {
 	}
 	
 	render() {
-		var MyList = this.state.data.map(function(myObj,index){
+		var show = {
+			display: this.state.visible ? "block": "none"
+		}
+		var invisible = {
+			display: this.state.visible ? "none" : "block"
+		}
+		//var MyList = 
 			return [
-				<div key={1}><button className="menu" data-toggle="collapse" onClick><img src={myObj['im:image'][0].label} /><br />{myObj['im:name'].label}</button></div>,
-				<div key={2}><ul className="list">
-					<li>{myObj['im:name'].label}</li>
-					<li><img src={myObj['im:image'][1].label} /></li>
-					<li>Release Date: {moment(myObj['im:releaseDate'].label).format('MM/DD/YYYY')}</li>
-					<li>{myObj.summary.label}</li>
-					<li>Price: {myObj['im:price'].label} {myObj['im:price'].attributes.currency}</li>
-					<li>category: {myObj.category.attributes.label}</li>
-					<li><a href={myObj.link.attributes.href}>Buy it here!</a></li>
-					<li>Publisher: <a href={myObj['im:artist'].attributes.href}>{myObj['im:artist'].label}</a></li>
-				</ul></div>
-			]
-		})
-		return <div>{ MyList }</div>
+			<div key={1}><h1>Welcome to the app store list!</h1><p>Click a title to learn more about it.</p></div>,
+			<div key={2}> {this.state.data.map((myObj,index) =>
+				<button className="menu" onClick={this.toggle}><img src={myObj['im:image'][0].label} /><br />{myObj['im:name'].label}<ul className="list" style={show}>
+					<li>Release Date: {moment(myObj['im:releaseDate'].label).format('MM/DD/YYYY')}<br /><br /></li>
+					<li>{myObj.summary.label}<br /><br /></li>
+					<li>Price: {myObj['im:price'].label} {myObj['im:price'].attributes.currency}<br /><br /></li>
+					<li>Category: {myObj.category.attributes.label}<br /><br /></li>
+					<li><a href={myObj.link.attributes.href}>Buy it here!</a><br /><br /></li>
+					<li>Publisher: <a href={myObj['im:artist'].attributes.href}>{myObj['im:artist'].label}</a><br /><br /></li>
+				</ul></button>,
+				
+				
+			)}
+			</div>
+		]}
+		//return <div>{ MyList }</div>
   }
-}
+  
 
 export default App;
