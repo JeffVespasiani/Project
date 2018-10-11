@@ -34,7 +34,6 @@ class App extends Component {
 		
 		//var MyList = 
 			return [
-			<div><h1>Welcome to the app store list!</h1><p>Click a title to learn more about it.</p></div>,
 			<div> {this.state.data.map((myObj,index) =>
 				<div key={index}><button className="menu" onClick={this.toggle.bind(this, index)}><img src={myObj['im:image'][0].label} /><br />{myObj['im:name'].label}<ul className="list" style={show}>
 					<li>Release Date: {moment(myObj['im:releaseDate'].label).format('MM/DD/YYYY')}<br /><br /></li>
