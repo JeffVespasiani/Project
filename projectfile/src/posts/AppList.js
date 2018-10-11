@@ -31,9 +31,8 @@ class App extends Component {
 		var show = {
 			display: this.state.visible ? "block": "none"
 		}
-		var invisible = {
-			display: this.state.visible ? "none" : "block"
-		}
+		
+		
 		//var MyList = 
 			return [
 			<div key={1}><h1>Welcome to the app store list!</h1><p>Click a title to learn more about it.</p></div>,
@@ -51,6 +50,7 @@ class App extends Component {
 			)}
 			</div>
 		]}
+		
 		//return <div>{ MyList }</div>
   }
   
