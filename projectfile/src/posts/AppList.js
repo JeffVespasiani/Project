@@ -45,8 +45,6 @@ class App extends Component {
 					<li><a href={myObj.link.attributes.href}>Buy it here!</a><br /><br /></li>
 					<li>Publisher: <a href={myObj['im:artist'].attributes.href}>{myObj['im:artist'].label}</a><br /><br /></li>
 				</ul></button></div>,
-				
-				
 			)}
 			</div>
 		]}
